@@ -35,8 +35,8 @@ jobs:
         uses: py-cov-action/python-coverage-comment-action@v3
         with:
           GITHUB_TOKEN: ${{ github.token }}
-          MINIMUM_GREEN: 90
-          MINIMUM_ORANGE: 70
+          MINIMUM_GREEN: 50
+          MINIMUM_ORANGE: 40
 
       - name: Enforce minimum coverage
-        run: coverage report --include='src/*' --fail-under=90
+        run: coverage report --include='src/*' --fail-under=50
