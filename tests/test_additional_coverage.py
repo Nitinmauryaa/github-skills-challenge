@@ -4,11 +4,11 @@ import sys
 from pathlib import Path
 
 import pytest
-import event_consumer
 
 SRC_DIR = Path(__file__).resolve().parents[1] / "src"
 sys.path.insert(0, str(SRC_DIR))
 
+import event_consumer  # noqa: E402
 from aiops_pipeline import load_data, run_pipeline  # noqa: E402
 from anomaly_detector import AnomalyDetector  # noqa: E402
 from calculations import area_of_circle, get_nth_fibonacci  # noqa: E402
